@@ -59,36 +59,42 @@ Structural patterns focus on how objects and classes are organized and composed 
 - **Detailed Explanation**: The Bridge pattern is used to separate the abstraction from its implementation so that both can evolve independently without causing a ripple effect.
 - **Scenario**: Separating different types of payment methods and payment gateways in a Spring Boot application ensures flexibility in adding new payment options.
 - **Benefit**: Enhances scalability and reduces coupling between abstraction and implementation.
+- [Check In Detail](../patterns/structural/Bridge.md)
 
 ### 2.3 Composite
 - **Definition**: Composes objects into tree structures to represent part-whole hierarchies.
 - **Detailed Explanation**: This pattern is ideal for representing hierarchical structures, such as file systems or organizational charts, where individual and composite objects are treated uniformly.
 - **Scenario**: Representing a hierarchical menu structure in a Spring Boot web application simplifies navigation and rendering.
 - **Benefit**: Simplifies client code by treating individual and composite objects uniformly.
+- [Check In Detail](../patterns/structural/Composite.md)
 
 ### 2.4 Decorator
 - **Definition**: Dynamically adds responsibilities to an object without modifying its code.
 - **Detailed Explanation**: The Decorator pattern is used when you want to add new behavior to an object without altering its structure.
 - **Scenario**: Adding logging or security features to Spring Boot services using decorators enhances functionality without modifying the core service.
 - **Benefit**: Promotes flexibility and adherence to the Open/Closed Principle.
+- [Check In Detail](../patterns/structural/Decorator.md)
 
 ### 2.5 Facade
 - **Definition**: Provides a simplified interface to a larger body of code.
 - **Detailed Explanation**: The Facade pattern is used to provide a unified interface to a set of interfaces in a subsystem, making it easier for clients to interact with the system.
 - **Scenario**: Creating a `ServiceFacade` in Spring Boot to encapsulate complex interactions with multiple services simplifies client interactions.
 - **Benefit**: Reduces complexity and promotes cleaner code.
+- [Check In Detail](../patterns/structural/Facade.md)
 
 ### 2.6 Flyweight
 - **Definition**: Reduces memory usage by sharing common parts of objects.
 - **Detailed Explanation**: The Flyweight pattern is useful when many objects share common data. It ensures efficient memory usage by sharing immutable parts of objects.
 - **Scenario**: Caching reusable objects like configurations or metadata in a Spring Boot application reduces memory overhead.
 - **Benefit**: Optimizes memory usage and improves performance.
+- [Check In Detail](../patterns/structural/Flyweight.md)
 
 ### 2.7 Proxy
 - **Definition**: Provides a surrogate or placeholder to control access to another object.
 - **Detailed Explanation**: The Proxy pattern is used to add a level of control to accessing an object, such as lazy initialization, access control, or logging.
 - **Scenario**: Using a Spring `AOP` proxy for implementing method-level security or logging ensures controlled access and behavior tracking.
 - **Benefit**: Promotes control and flexibility in object access.
+- [Check In Detail](../patterns/structural/Proxy.md)
 
 ---
 
@@ -100,66 +106,77 @@ Behavioral patterns focus on communication and the assignment of responsibilitie
 - **Detailed Explanation**: The Chain of Responsibility pattern allows multiple handlers to process a request without coupling the sender to a specific handler.
 - **Scenario**: Implementing a request validation pipeline in Spring Boot middleware ensures modular and flexible validation logic.
 - **Benefit**: Promotes loose coupling and flexibility in request handling.
+- [Check In Detail](../patterns/behavioural/ChainOfResponsibility.md)
 
 ### 3.2 Command
 - **Definition**: Encapsulates a request as an object, allowing parameterization and queuing.
 - **Detailed Explanation**: The Command pattern is useful for implementing undoable operations and queuing commands for execution.
 - **Scenario**: Handling background tasks as commands in a Spring Boot application simplifies task management and execution.
 - **Benefit**: Promotes encapsulation and extensibility in request handling.
+- [Check In Detail](../patterns/behavioural/Command.md)
 
 ### 3.3 Interpreter
 - **Definition**: Defines a grammar and an interpreter for a specific language.
 - **Detailed Explanation**: The Interpreter pattern is used for parsing and interpreting structured input.
 - **Scenario**: Parsing and executing custom query languages in Spring Boot enables flexibility in querying data.
 - **Benefit**: Simplifies complex parsing logic and promotes flexibility.
+- [Check In Detail](../patterns/behavioural/Interpreter.md)
 
 ### 3.4 Iterator
 - **Definition**: Provides a way to access elements of a collection sequentially.
 - **Detailed Explanation**: The Iterator pattern abstracts the traversal of collections without exposing their internal structure.
 - **Scenario**: Iterating through a collection of beans or configurations in a Spring Boot application ensures clean and consistent access.
 - **Benefit**: Promotes encapsulation and simplifies collection traversal.
+- [Check In Detail](../patterns/behavioural/Iterator.md)
 
 ### 3.5 Mediator
 - **Definition**: Defines an object that encapsulates how objects interact.
 - **Detailed Explanation**: The Mediator pattern is useful for reducing direct dependencies between interacting objects by centralizing communication.
 - **Scenario**: Managing communication between microservices using a central message broker in Spring Boot ensures decoupled and organized interactions.
 - **Benefit**: Promotes decoupling and simplifies complex interactions.
+- [Check In Detail](../patterns/behavioural/Mediator.md)
 
 ### 3.6 Memento
 - **Definition**: Captures and restores an object's internal state.
 - **Detailed Explanation**: The Memento pattern is used for implementing undo functionality by saving the state of an object.
 - **Scenario**: Implementing undo functionality for user actions in a Spring Boot application ensures better user experience.
 - **Benefit**: Promotes flexibility and restores system state.
+- [Check In Detail](../patterns/behavioural/Memento.md)
 
 ### 3.7 Observer
 - **Definition**: Establishes a dependency between objects so that one object is notified of state changes in others.
 - **Detailed Explanation**: The Observer pattern is used when one object (subject) needs to notify multiple dependent objects (observers) about changes.
 - **Scenario**: Using Spring's `ApplicationListener` to react to application events ensures real-time updates and decoupling.
 - **Benefit**: Promotes decoupling and real-time updates.
+- [Check In Detail](../patterns/behavioural/Observer.md)
 
 ### 3.8 State
 - **Definition**: Allows an object to alter its behavior when its internal state changes.
 - **Detailed Explanation**: The State pattern is useful for managing state transitions without complex conditional logic.
 - **Scenario**: Managing order statuses (e.g., pending, shipped, delivered) in a Spring Boot e-commerce application simplifies state management.
 - **Benefit**: Promotes cleaner code and better state handling.
+- [Check In Detail](../patterns/behavioural/State.md)
 
 ### 3.9 Strategy
 - **Definition**: Defines a family of algorithms, encapsulates each one, and makes them interchangeable.
 - **Detailed Explanation**: The Strategy pattern is useful for selecting algorithms at runtime based on conditions.
 - **Scenario**: Implementing different sorting strategies for data retrieval in a Spring Boot application ensures flexibility and better performance.
 - **Benefit**: Promotes flexibility and adheres to the Open/Closed Principle.
+- [Check In Detail](../patterns/behavioural/Strategy.md)
 
 ### 3.10 Template Method
 - **Definition**: Defines the skeleton of an algorithm, deferring steps to subclasses.
 - **Detailed Explanation**: The Template Method pattern is used to enforce a specific sequence of steps in an algorithm while allowing subclasses to define certain steps.
 - **Scenario**: Defining a base class for batch processing in Spring Boot with customizable steps ensures consistency and reusability.
 - **Benefit**: Promotes consistency and reduces code duplication.
+- [Check In Detail](../patterns/behavioural/TemplateMethod.md)
 
 ### 3.11 Visitor
 - **Definition**: Adds new operations to objects without modifying their structure.
 - **Detailed Explanation**: The Visitor pattern is useful for adding functionality to objects without altering their classes.
 - **Scenario**: Implementing auditing logic that visits different entity types in a Spring Boot application ensures flexibility in adding new operations.
 - **Benefit**: Promotes extensibility and adheres to the Open/Closed Principle.
+- [Check In Detail](../patterns/behavioural/Visitor.md)
 
 ---
 
